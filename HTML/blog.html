@@ -1,0 +1,73 @@
+{% include 'header.html' %}
+
+
+ <!-- Page Header Start -->
+ <div class="container-fluid py-5 mb-5" style="background: url(/static/img/header/blog1.png) center center no-repeat;background-size: cover;height: 80vh;">
+  <div class="container py-5">
+        <h1 class="animated slideInDown mb-3 text-color">Blogs</h2>
+      {% comment %} <h2 class="  mb-3 text animated slideInDown">Blogs</h2> {% endcomment %}
+      <h1 class="  mb-5  animated slideInDown">Tech experts' latest:<br> Innovations in digital<br> enterprise</h1>
+      <a class="newbtn " href="">Get Started </a>
+
+  </div>
+</div>
+<!-- Page Header End -->
+
+
+
+
+
+
+
+<!-- section start -->
+<div class="container c1 mt-5">
+  {% for blog in blogs %}
+    <div class="card1">
+      <div class="card__header">
+        <img src="{{ blog.image.url }}" alt="card__image" class="card__image img1" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-blue">Blog</span>
+
+        <p class="text-dark fs-4" >{{ blog.title }}</p>
+        <div class="card__footer">
+            <a class="newbtn " href="{% url 'blog_category' blog.id %}">Read More</a>
+          </div>
+        
+        
+      </div>
+     
+    </div>
+  {% endfor %}
+
+
+
+
+
+
+
+
+
+</div>
+<!-- section end -->
+ <!-- who can Start -->
+ <div class="container">
+    <div class="row " style="margin-top: 100px;">
+        <div class="col-md-12">
+            <h1 class="text-center">How can we help you?</h1>
+            <p class="text-center" style="font-size: 22px;">Are you ready to push boundaries and explore new
+                frontiers of innovation?</p>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 ">
+                        <a href="contact.html"><button class=" mt-3 mb-5 lwt ">LET'S WORK TOGETHER</button></a>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-- who can End -->
+
+{% include 'footer.html' %}

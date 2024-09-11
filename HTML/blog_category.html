@@ -1,0 +1,82 @@
+{% include 'header.html' %}
+<div class="container-fluid mb-5 p-5" style="background-color: #f3f3f3;">
+
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-10" style="background-color: white" >
+           <h2 class="p-1 mt-3 mb-3"> {{ blog.title }}</h2>
+           <div class="">
+                <img src="{{ blog.image.url }}" alt="card__image" class="" width="800px" height="400px">
+           </div>
+           
+                                       
+                <p class="mt-2"><i class="fa-solid fa-user m-1"  ></i>  {{ blog.blog_writer }}  &nbsp;    <i class="fa-solid fa-calendar-week m-2"></i>{{blog.bolg_date}} &nbsp;<i class="fa-regular fa-clock m-2"></i>{{ blog.blog_time }} 
+                </p>
+                <p class="justify-content lh-lg">{{ blog.description }}</p>
+                <h4>{{ blog.title2 }}</h4>
+                <p class="justify-content lh-lg mt-4">{{ blog.description2 }}</p>
+                <h4>{{ blog.title3 }}</h4>
+                <p class="justify-content lh-lg mt-4">{{ blog.description3 }}</p>
+                <ol>
+                {% if blog.point1 %}
+                <h5><li>{{ blog.point1 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des1 }}</p>
+                {% endif %}
+                {% if blog.point2 %}
+                <h5><li>{{ blog.point2 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des2 }}</p>
+                {% endif %}
+                {% if blog.point3 %}
+                <h5><li>{{ blog.point3 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des3 }}</p>
+                {% endif %}
+                {% if blog.point4 %}
+                <h5><li>{{ blog.point4 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des4 }}</p>
+                {% endif %}
+                {% if blog.point5 %}
+                <h5><li>{{ blog.point5 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des5 }}</p>
+                {% endif %}
+                {% if blog.point6 %}
+                <h5><li>{{ blog.point6 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des6 }}</p>
+                {% endif %}
+                {% if blog.point7 %}
+                <h5><li>{{ blog.point7 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des7 }}</p>
+                {% endif %}
+                {% if blog.point8 %}
+                <h5><li>{{ blog.point8 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des8 }}</p>
+                {% endif %}
+                {% if blog.point9 %}
+                <h5><li>{{ blog.point9 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des9 }}</p>
+                {% endif %}
+                {% if blog.point10 %}
+                <h5><li>{{ blog.point10 }}</li></h5>
+                <p class="justify-content lh-lg mt-4">{{ blog.des10 }}</p>
+                {% endif %}
+
+                </ol>
+        </div> 
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+{% include 'footer.html' %}
